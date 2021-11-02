@@ -3,6 +3,8 @@ Includes code that uninstalls and installs Apache Ant version 1.10 on checking t
 The script contains 3 function ;
 
 #1. To uninstall Apache Ant if it is already installed.
+- Checks if Apache Ant already exists or not
+- If yes, deletes the Ant folder
 
 #2. Download and install the Apache Ant zip file if there is internet access.
 
