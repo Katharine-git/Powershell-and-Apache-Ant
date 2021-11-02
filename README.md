@@ -11,6 +11,6 @@ The script contains 3 function ;
 - If yes, downloads the zip file , extract the file and install Apache Ant
 
 #3. Download the zip file from a seperate location and install if no access to internet.
-- For unavailability of internet access, extracts the zip file from a seperate location(preferrably a repository) and install Apache Ant.
+- For unavailability of internet access, extracts the zip file from a seperate location and install Apache Ant.
 
 
