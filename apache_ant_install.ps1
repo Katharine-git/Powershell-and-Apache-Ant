@@ -1,5 +1,5 @@
 ﻿
-#uninstall
+#uninstall Apache Ant
 function uninstallAnt ($path) {
 
   if (Test-Path $path)
@@ -21,7 +21,7 @@ function uninstallAnt ($path) {
   }
 }
 
-#download
+#download Zip File
 function downloadAnt ($url,$destination,$unzip_destination,$version)
 {
   $status = wget $url -UseBasicParsing | ForEach-Object { $_.StatusCode }
@@ -37,7 +37,8 @@ function downloadAnt ($url,$destination,$unzip_destination,$version)
   }
   installAnt $destination $unzip_destination $version
 }
-#installing
+
+#installing Apache Ant
 function installAnt ($destination,$unzip_destination,$version)
 {
   Expand-Archive -LiteralPath $destination -DestinationPath $unzip_destination -Force
@@ -51,6 +52,7 @@ function installAnt ($destination,$unzip_destination,$version)
   }
 
 }
+
 #variables
 $path = "C:\Users\Administrator\Desktop\apache_ant_install\dev.properties"
 $output = Get-Content $path | ConvertFrom-StringData
@@ -75,7 +77,7 @@ else
 {
   installAnt $destination $unzip_destination $version
 }
-#set environment variable
+#setting environment variable
 [Environment]::SetEnvironmentVariable("ANT_HOME","$unzip_destination/$version","machine")
 [Environment]::SetEnvironmentVariable("Path",$env:Path + ";%ANT_HOME%\bin","Machine")
 
