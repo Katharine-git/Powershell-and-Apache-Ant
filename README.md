@@ -7,6 +7,10 @@ The script contains 3 function ;
 - If yes, deletes the Ant folder
 
 #2. Download and install the Apache Ant zip file if there is internet access.
+- Checks for internet availability
+- If yes, downloads the zip file , extract the file and install Apache Ant
 
 #3. Download the zip file from a seperate location and install if no access to internet.
+- For unavailability of internet access, extracts the zip file from a seperate location(preferrably a repository) and install Apache Ant.
+
 
