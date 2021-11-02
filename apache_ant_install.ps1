@@ -65,6 +65,8 @@ $servername = $output.servername
 $logpath=$output.logpath
 Start-Transcript -Path $logpath
 $VerbosePreference = "continue"
+
+#Uninstall function call
 uninstallAnt "$unzip_destination/$version"
 
 #check server have internet access
@@ -77,6 +79,7 @@ else
 {
   installAnt $destination $unzip_destination $version
 }
+
 #setting environment variable
 [Environment]::SetEnvironmentVariable("ANT_HOME","$unzip_destination/$version","machine")
 [Environment]::SetEnvironmentVariable("Path",$env:Path + ";%ANT_HOME%\bin","Machine")
